@@ -4,7 +4,7 @@ PHP version of the hacker battleship scoring engine
 REQUIRES
 --------
 
- * PHP5 (and optionally php5-fpm)
+ * PHP5 (tested with php5-fpm)
  * Postgresql
 
 In Ubuntu based distributions, you can get all the dependencies by running:
@@ -44,9 +44,9 @@ INSTALLATION
 	  server_name hackerbattleship;
 	  access_log /var/log/nginx/hackerbattleship.log;
 	  error_log /var/log/nginx/hackerbattleship.log;
-	
+
 	  root /data/web/hackerbattleship/htdocs;
-	
+
 	  location / {
 	    index index.php
 	    try_files $uri $uri index.php;
