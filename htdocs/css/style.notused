@@ -1,0 +1,211 @@
+/* 
+// ------------------------------
+// color list
+//   dark blue            0C152A
+//   lighter dark blue    2E374C
+//   light blue           6591BD
+//   dark charcoal        BC966E
+//   light grey           C1BFBD
+//   baby asprin orange   BC966E
+//   light red            9C4045
+// ------------------------------
+*/
+
+@font-face {
+  font-family: 'digital';
+  src: url('/fonts/DS-DIGI.TTF');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  color: #CCCCCC;
+  background-color: #000000;
+  font-family: 'Ubuntu Mono', sans-serif;
+  font-size: 13pt;
+}
+
+input {
+  color: #FFFFFF;
+  background-color: #0C152A;
+  padding: 5px;
+}
+
+a, a:link {
+  background-color: inherit;
+  color: #6968b3;
+  text-decoration: none;
+}
+
+a:visited {
+  background-color: inherit;
+  color: #a78b7f;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  background-color: inherit;
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+/* Fibonacci based heading scale ratio */
+h1{ font-size: 4.4em; font-weight: normal; }
+h2{ font-size: 2.8em; font-weight: bold; }
+h3{ font-size: 1.6em; font-weight: bold; }
+h4{ font-size: 1.2em; font-weight: bold; }
+
+#login {
+  float: right;
+  font-size: small;
+  color: #CCCCCC;
+  background-color: #2E374C;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+#login input {
+  padding: 0;
+  width: 75px;
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid #FF7E00;
+}
+
+#header {
+  color: #FF7E00;
+  /*background-color: #2E374C;*/
+  background-color: #2E374C;
+  min-height: 70px;
+  border-bottom: 1px solid #CCCCCC;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+#floater {
+  /* used to manage the content vertical center */
+  float: left;
+  height: 80%;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#nav {
+  margin: 5px;
+}
+
+#content {
+  background-color: #C1BFBD;
+  color: #111111;
+  text-shadow: 1px 1px 1px #000;
+  font-family: digital;
+  font-size: 1.5em;
+  padding: 30px;
+  width: 80%;
+  overflow: auto;
+  margin: auto;
+  /* rounded border */
+  border: 5px solid #BC966E;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  /* vertical center */
+  clear: both;
+  height: 340px;
+  position: relative;
+  /* end centering */
+}
+
+#footer {
+  float: left;
+  position: fixed;
+  bottom: 5px;
+  width: 100%;
+  font-size: small;
+  text-align: center;
+}
+
+#grid {
+  border: 3px solid #000000;
+  margin: auto;
+  background-color: #F0F0f0;
+  float: left;
+}
+
+.col_id {
+  padding: 3px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+.row_id {
+  padding: 3px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+.grid_space, .agrid_space {
+  border: 1px solid #000000;
+  padding: 3px;
+  width: 30px;
+  height: 30px;
+}
+
+li.agrid_space {
+  cursor: default;
+}
+
+li.grid_space {
+  cursor: pointer;
+}
+
+.open {
+  background-color: #2E374C;
+}
+
+.hit {
+  background-color: #9C4045;
+}
+
+.miss {
+  background-color: #6591BD;
+}
+
+#score {
+  border: 3px solid #000000;
+  margin: auto;
+  float: right;
+  background-color: #C0FCC0;
+}
+
+.team_name {
+  font-size: 130%;
+  border: 1px solid #000000;
+  background-color: #999999;
+}
+
+.team_score {
+  font-size: 130%;
+  border: 1px solid #000000;
+  background-color: #999999;
+}
+
+#descr {
+  margin-top: 20px;
+}
+
+#descr_txt {
+  font-family: 'Ubuntu Mono', sans-serif;
+  font-size: small;
+  width: 50%;
+}
+
+.rules tr, .rules td, .rules table {
+  border: 1px solid #000000;
+}
+
+.rules li {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
