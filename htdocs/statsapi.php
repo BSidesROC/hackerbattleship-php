@@ -45,7 +45,7 @@ case "grid":
 # =====================================
 # grid array
 # =====================================
-  $grid_qry = "select col_id, row_id, status from grid order by col_id, row_id";
+  $grid_qry = "select col_id, row_id, status from grid order by row_id, col_id";
   $grid_rslt = pg_query($db_handle, $grid_qry);
   if ($grid_rslt) {
     $cur = 0;
