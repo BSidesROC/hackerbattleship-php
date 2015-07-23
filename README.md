@@ -1,6 +1,8 @@
 # hackerbattleship-php
 PHP version of the hacker battleship scoring engine
 
+![mockup of the main screen](doc/img/mockup.png "mockup of the main screen")
+
 REQUIRES
 --------
 

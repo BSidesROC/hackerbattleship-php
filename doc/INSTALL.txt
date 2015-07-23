@@ -1,0 +1,53 @@
+==========================================
+DATABASE SETUP
+==========================================
+PostgreSQL:
+1) create the database owner account:
+* sudo -u postgres createuser -lDERPS ctf
+  - the app doesn't use this, but you will
+    need it to create the database properly
+  - pick a strong password for this
+
+2) create the read-only and read-write
+   database accounts:
+* sudo -u postgres createuser -lDERPS ctf_ro
+* sudo -u postgres createuser -lDERPS ctf_rw
+  - you will be prompted to set a password.
+  - the web app is configured for a default password of 'ctf'
+  - please pick a better one
+  - update web/inc/db.inc.php with whatever you picked)
+
+3) create the database & assign it to the ctf
+   database owner account from step 1
+* sudo -u postgres createdb -O ctf ctf
+
+4) populate the database tables and sample data
+* psql -U ctf -h localhost -f db.sql ctf
+
+==========================================
+WEB APP SETUP
+==========================================
+1) Install node.js
+   - wget http://nodejs.org/dist/latest/<filename>
+     (example: http://nodejs.org/dist/latest/node-v0.10.35.tar.gz)
+   - tar zxvf node-v0.10.35.tar.gz
+   - cd node-v0.10.35
+   - ./configure --prefix=/opt
+   - make
+   - sudo make install
+   - OPTIONAL: add the path to your env: echo "PATH=/opt/node/bin:$PATH" >>~/.bashrc
+2) Install nginx (sudo apt-get install nginx)
+3) Copy the system configs from etc/* to /etc on the server
+   - the default web root is /data/web/hackerbattleship
+4) Copy the web application files to the web root
+   - cp -r web/* /data/web/hackerbattleship
+5) cd web
+6) npm install
+7) Restart nginx, and start the node.js instance
+   - service nginx start
+   - start hackerbattleship
+
+NOTE: the default installation has the node.js application running on port 9001
+with nginx proxying requests to it.
+----------------------------------------------------
+
